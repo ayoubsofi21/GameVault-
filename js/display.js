@@ -40,21 +40,14 @@ function initSearch() {
   `;
 }
 export const createHeader = () => `
-  <header class="bg-white p-4 rounded-b-2xl shadow flex justify-between items-center sticky top-0">
+  <header class="bg-white p-4 rounded-b-2xl shadow flex  justify-between items-center sticky top-0">
     <h1 class="text-2xl font-bold">
       <span class="text-orange-400">Game</span><span class="text-teal-500">Vault</span>
     </h1>
     <button id="cartBtn" class="bg-teal-500 text-white p-3 rounded-full shadow-md">🛒</button>
   </header>
 `;
-export function initHomePage() {
-  const container = document.querySelector(".card-container");
-  container.innerHTML = `${createHeader()}${initSearch()}`;
-  displayGames();
-}
-initHomePage();
-
-export const createCategoryButtons = () => `
+export const createCategory = () => `
   <div class="px-4 mb-4 flex space-x-2">
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="All">All</button>
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="Action">Action</button>
@@ -63,24 +56,13 @@ export const createCategoryButtons = () => `
   </div>
 `;
 
-export const createGameCard = (game) => `
-  <div class="game-card bg-white rounded-xl shadow p-4 flex flex-col">
-    <img src="${game.image}" class="rounded-lg w-full h-48 object-cover mb-2"/>
-    <div class="flex justify-between items-center">
-      <div>
-        <h2 class="text-sm text-purple-700 font-semibold">${game.title}</h2>
-        <p class="text-gray-700 font-bold">${game.price} $</p>
-      </div>
-      <button class="add-to-cart border border-orange-400 text-orange-500 px-4 py-1 rounded-lg hover:bg-orange-100 transition" data-title="${game.title}">Add to cart</button>
-    </div>
-  </div>
-`;
-
-export const createBottomNav = () => `
-  <nav class="fixed bottom-0 left-0 w-full bg-white shadow-inner flex justify-around p-3">
-    <button>🏠</button>
-    <button id="cartNav">📦</button>
-    <button>❤️</button>
-    <button>👤</button>
-  </nav>
-`;
+export function initHomePage() {
+  const container = document.querySelector(".card-container");
+  container.innerHTML = `
+  ${createHeader()}
+  ${initSearch()}
+  ${createCategory()}
+  `;
+  displayGames();
+}
+initHomePage();
