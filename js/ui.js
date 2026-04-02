@@ -10,14 +10,17 @@ export function displayGames(gameList = games) {
     const card = document.createElement("div");
     card.innerHTML = `
      <div class="px-4 space-y-4 my-4">
-      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="bg-white rounded-xl shadow p-2 flex flex-col">
         <img
           src="${game.image}"
           class="rounded-lg w-full h-48 object-cover mb-2"
         />
         <div class="flex justify-between items-center">
           <div>
+        <div class="flex gap-4"> 
             <h2 class="text-sm text-purple-700 font-semibold">${game.title}</h2>
+            <h1 class="text-sm text-red-500 font-semibold">${game.category}</h1>
+        </div>       
             <p class="text-gray-700 font-bold">${game.price.toLocaleString()}$</p>
           </div>
         <button
