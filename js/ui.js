@@ -1,4 +1,8 @@
 import { games } from "./games.js";
+// import { addCartEvents } from "./cart.js";
+import { addCartEvents } from "./card.js";
+
+import { initSearchEvent } from "./main.js";
 export function displayGames(gameList = games) {
   const container = document.querySelector(".card-container");
   container.innerHTML = "";
@@ -16,11 +20,12 @@ export function displayGames(gameList = games) {
             <h2 class="text-sm text-purple-700 font-semibold">${game.title}</h2>
             <p class="text-gray-700 font-bold">${game.price.toLocaleString()}$</p>
           </div>
-          <button
-            class="border border-orange-400 text-orange-500 px-4 py-1 rounded-lg hover:bg-orange-100 transition"
-          >
-            Add to cart
-          </button>
+        <button
+          class="add-to-cart border border-orange-400 text-orange-500 px-4 py-1 rounded-lg hover:bg-orange-100 transition"
+          data-id="${game.id}"
+        >
+          Add to cart
+        </button>
         </div>
       </div>
     </div>
@@ -30,6 +35,7 @@ export function displayGames(gameList = games) {
 
     container.appendChild(card);
   });
+  addCartEvents();
 }
 export function initSearch() {
   return `
@@ -67,8 +73,10 @@ export function initHomePage() {
   ${createHeader()}
   ${initSearch()}
   ${createCategory()}
+  <div class="card-container"></div>
   `;
 
   displayGames();
+  initSearchEvent();
 }
 initHomePage();
