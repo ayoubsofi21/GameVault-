@@ -52,7 +52,8 @@ export const createHeader = () => `
     <h1 class="text-2xl font-bold">
       <span class="text-orange-400">Game</span><span class="text-teal-500">Vault</span>
     </h1>
-    <button id="cartBtn" class="bg-teal-500 text-white p-3 rounded-full shadow-md">🛒</button>
+    <button id="cartBtn" class="bg-teal-500 text-white p-3 rounded-full shadow-md"> 
+    <a href=./cart.html>🛒</a></button>
   </header>
 `;
 export const createCategory = () => `
