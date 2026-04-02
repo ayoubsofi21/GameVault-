@@ -66,11 +66,11 @@ export const games = [
   },
   {
     id: 7,
-    title: "Red Dead Redemption 2",
+    title: "Red Dead Redemption",
     price: 39.99,
     category: "Adventure",
     image:
-      "https://cdn1.epicgames.com/offer/Heather/EGS_RedDeadRedemption2_RockstarGames_S1_2560x1440-4a9b0e9c1a48d40cb88001cc041b8510",
+      "https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S2_1200x1600-53a8fb2c0201cd8aea410f2a049aba3f?resize=1&w=360&h=480&quality=medium",
     description:
       "Vivez l'histoire d'Arthur Morgan dans l'Amérique sauvage de 1899 avec un monde ouvert immersif.",
   },
@@ -90,7 +90,7 @@ export const games = [
     price: 29.99,
     category: "Action",
     image:
-      "https://cdn1.epicgames.com/offer/bd9e5b3d3f3242a8a7e2c9f9f63f8d39/EGS_GTAV_PremiumEdition_RockstarGames_S1",
+      "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/mw3/overview/Store_GamesPDP_Hero01.png?imwidth=1920",
     description:
       "Explorez Los Santos dans ce jeu d'action en monde ouvert avec une histoire captivante.",
   },
@@ -110,7 +110,7 @@ export const games = [
     price: 59.99,
     category: "RPG",
     image:
-      "https://cdn1.epicgames.com/offer/hohogwartslegacy/EGS_HogwartsLegacy_AvalancheSoftware_S1",
+      "https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S2_1200x1600-53a8fb2c0201cd8aea410f2a049aba3f?resize=1&w=360&h=480&quality=medium",
     description:
       "Découvrez la magie à Poudlard dans ce RPG en monde ouvert dans l'univers de Harry Potter.",
   },
@@ -120,7 +120,7 @@ export const games = [
     price: 49.99,
     category: "Racing",
     image:
-      "https://cdn1.epicgames.com/offer/forzahorizon5/EGS_ForzaHorizon5_PlaygroundGames_S1",
+      "https://external-game-cover-image-cf.store.on.epicgames.com/314499?resize=1&w=360&h=480&quality=medium",
     description:
       "Conduisez les voitures les plus rapides dans les paysages magnifiques du Mexique.",
   },

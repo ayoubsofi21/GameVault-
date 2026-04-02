@@ -43,6 +43,17 @@ function removeFromCart(index) {
   saveCart();
   renderCart();
 }
+function changeQuantity(index, amount) {
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  saveCart();
+  renderCart();
+}
+
 function renderCart() {
   if (!container) return;
 
