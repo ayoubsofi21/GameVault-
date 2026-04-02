@@ -23,6 +23,7 @@ const totalPriceEl = document.getElementById("total-price");
 const checkoutBtn = document.querySelector(".checkout-btn");
 
 function saveCart() {
+  //   localStorage.setItem("cart", JSON.stringify(cart));
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 function addToCart(game) {
@@ -35,6 +36,12 @@ function addToCart(game) {
   }
 
   saveCart();
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  saveCart();
+  renderCart();
 }
 function renderCart() {
   if (!container) return;
