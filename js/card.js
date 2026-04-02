@@ -43,16 +43,6 @@ function removeFromCart(index) {
   saveCart();
   renderCart();
 }
-function changeQuantity(index, amount) {
-  cart[index].quantity += amount;
-
-  if (cart[index].quantity <= 0) {
-    cart.splice(index, 1);
-  }
-
-  saveCart();
-  renderCart();
-}
 
 function renderCart() {
   if (!container) return;
@@ -127,4 +117,29 @@ function renderCart() {
   }
 }
 
+function changeQuantity(index, amount) {
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  saveCart();
+  renderCart();
+}
+
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Votre panier est vide !");
+      return;
+    }
+
+    cart = [];
+    saveCart();
+    renderCart();
+
+    alert("Paiement effectué !");
+  });
+}
 renderCart();
