@@ -58,12 +58,12 @@ export const createHeader = () => `
   </header>
 `;
 export const createCategory = () => `
-  <div  class="px-4 mb-4 flex space-x-2">
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="All">All</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="Action">Action</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="RPG">RPG</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="FPS">FPS</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="FPS">RPT</button>
+  <div  class="px-4 mb-4 flex space-x-2 md:w-full md:space-x-2  md:flex md:justify-center md:gap-10">
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="All">All</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="Action">Action</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="RPG">RPG</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="FPS">FPS</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="FPS">RPT</button>
    
   </div>
 `;
