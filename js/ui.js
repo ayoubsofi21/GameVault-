@@ -6,7 +6,7 @@ import { initSearchEvent } from "./main.js";
 export function displayGames(gameList = games) {
   const container = document.querySelector(".card-container");
   container.innerHTML = "";
-  container.className = "md:grid md:space-y-0  md:grid-cols-3 md:gap-2";
+  // container.className = "md:grid md:space-y-0  md:grid-cols-3 md:gap-2";
 
   gameList.forEach((game) => {
     const card = document.createElement("div");
@@ -79,7 +79,6 @@ export function initHomePage() {
   ${createHeader()}
   ${initSearch()}
   ${createCategory()}
-  <div class="card-container"></div>
 
   `;
 
