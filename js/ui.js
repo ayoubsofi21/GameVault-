@@ -1,5 +1,5 @@
 import { games } from "./games.js";
-// import { addCartEvents } from "./cart.js";
+import { DisplayCategory } from "./category.js";
 import { addCartEvents } from "./card.js";
 
 import { initSearchEvent } from "./main.js";
@@ -8,7 +8,7 @@ export function displayGames(gameList = games) {
   container.innerHTML = "";
   // container.className = "md:grid md:space-y-0  md:grid-cols-3 md:gap-2";
 
-  gameList.forEach((game) => {
+  gameList.forEach((game) => {  
     const card = document.createElement("div");
     card.innerHTML = `
      <div class="px-4 space-y-4 my-4">
@@ -62,12 +62,12 @@ export const createHeader = () => `
   </header>
 `;
 export const createCategory = () => `
-  <div class="px-4 mb-4 flex space-x-2">
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="All">All</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="Action">Action</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="RPG">RPG</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="FPS">FPS</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-genre="FPS">RPT</button>
+  <div  class="px-4 mb-4 flex space-x-2">
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="All">All</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="Action">Action</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="RPG">RPG</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="FPS">FPS</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow" data-categories="FPS">RPT</button>
    
   </div>
 `;
@@ -84,5 +84,6 @@ export function initHomePage() {
 
   displayGames();
   initSearchEvent();
+  DisplayCategory();
 }
 initHomePage();
