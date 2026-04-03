@@ -1,14 +1,10 @@
 import { games } from "./games.js";
-import { DisplayCategory } from "./category.js";
 import { addCartEvents } from "./card.js";
 
-import { initSearchEvent } from "./main.js";
 export function displayGames(gameList = games) {
   const container = document.querySelector(".card-container");
   container.innerHTML = "";
-  // container.className = "md:grid md:space-y-0  md:grid-cols-3 md:gap-2";
-
-  gameList.forEach((game) => {  
+  gameList.forEach((game) => {
     const card = document.createElement("div");
     card.innerHTML = `
      <div class="px-4 space-y-4 my-4">
@@ -71,19 +67,3 @@ export const createCategory = () => `
    
   </div>
 `;
-
-export function initHomePage() {
-  const app = document.querySelector("#app");
-
-  app.innerHTML = `
-  ${createHeader()}
-  ${initSearch()}
-  ${createCategory()}
-
-  `;
-
-  displayGames();
-  initSearchEvent();
-  DisplayCategory();
-}
-initHomePage();

@@ -1,6 +1,11 @@
 import { games } from "./games.js";
-import { displayGames } from "./ui.js";
-
+import { DisplayCategory } from "./category.js";
+import {
+  initSearch,
+  displayGames,
+  createHeader,
+  createCategory,
+} from "./ui.js";
 export function initSearchEvent() {
   const input = document.querySelector(".search-input");
 
@@ -21,3 +26,18 @@ export function initSearchEvent() {
   });
 }
 
+export function initHomePage() {
+  const app = document.querySelector("#app");
+
+  app.innerHTML = `
+  ${createHeader()}
+  ${initSearch()}
+  ${createCategory()}
+
+  `;
+
+  displayGames();
+  initSearchEvent();
+  DisplayCategory();
+}
+initHomePage();

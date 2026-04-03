@@ -10,12 +10,10 @@ export function DisplayCategory() {
       //   console.log(category);
       if (category.toLowerCase() === "all") {
         displayGames(games);
-        console.log("khdm hna");
       } else {
-        const result = [];
+        let result = [];
         for (let i = 0; i < games.length; i++) {
           if (games[i].category.toLowerCase() === category.toLowerCase()) {
-            // displayGames(games[i]);
             result.push(games[i]);
           }
         }
