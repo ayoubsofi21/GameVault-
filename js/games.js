@@ -80,7 +80,7 @@ export const games = [
     price: 44.99,
     category: "Action",
     image:
-      "https://cdn1.epicgames.com/offer/acvalhalla/EGS_AssassinsCreedValhalla_Ubisoft_S1_2560x1440",
+      "https://external-game-cover-image-cf.store.on.epicgames.com/96437?resize=1&w=360&h=480&quality=medium",
     description:
       "Incarnez Eivor, un guerrier viking, et conquérir l'Angleterre dans cette aventure épique.",
   },

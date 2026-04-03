@@ -58,8 +58,7 @@ function renderCart() {
     div.className = "flex justify-between items-center p-3 border rounded-lg";
 
     div.innerHTML = `
-        </div>
-            <div class="bg-white rounded-2xl shadow-md p-4 flex items-center gap-4 w-[420px]">
+        <div class="bg-white rounded-2xl shadow-md p-4 flex items-center gap-4 w-[420px]">
 
             <img 
             src="${game.image}"

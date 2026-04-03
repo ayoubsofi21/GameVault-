@@ -6,11 +6,13 @@ import { initSearchEvent } from "./main.js";
 export function displayGames(gameList = games) {
   const container = document.querySelector(".card-container");
   container.innerHTML = "";
+  container.className = "md:grid md:space-y-0  md:grid-cols-3 md:gap-2";
+
   gameList.forEach((game) => {
     const card = document.createElement("div");
     card.innerHTML = `
      <div class="px-4 space-y-4 my-4">
-      <div class="bg-white rounded-xl shadow p-2 flex flex-col">
+      <div class="bg-white rounded-xl shadow p-2 flex flex-col  ">
         <img
           src="${game.image}"
           class="rounded-lg w-full h-48 object-cover mb-2"
@@ -78,6 +80,7 @@ export function initHomePage() {
   ${initSearch()}
   ${createCategory()}
   <div class="card-container"></div>
+
   `;
 
   displayGames();
