@@ -1,5 +1,5 @@
 import { games } from "./games.js";
-import { addCartEvents } from "./card.js";
+import { addCartEvents } from "./cart.js";
 
 export function displayGames(gameList = games) {
   const container = document.querySelector(".card-container");
@@ -9,10 +9,10 @@ export function displayGames(gameList = games) {
     card.innerHTML = `
      <div class="px-4 space-y-4 my-4">
       <div class="bg-white rounded-xl shadow p-2 flex flex-col  ">
-        <img
+        <a href="detail.html/${game.id}"><img
           src="${game.image}"
           class="rounded-lg w-full h-48 object-cover mb-2"
-        />
+        /></a>
         <div class="flex justify-between items-center">
           <div>
         <div class="flex gap-4"> 
@@ -43,7 +43,6 @@ export function initSearch() {
   <div class="p-4">
       <div class="flex items-center bg-white rounded-xl shadow px-4 py-2">
         <input type="search" placeholder="Search Anything..." class="search-input flex-1 outline-none text-gray-700" />
-        <button class="ml-2 text-gray-400">🎤</button>
       </div>
     </div>
   `;
@@ -63,7 +62,7 @@ export const createCategory = () => `
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="Action">Action</button>
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="RPG">RPG</button>
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="FPS">FPS</button>
-    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="FPS">RPT</button>
+    <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="Adventure">Adventure</button>
    
   </div>
 `;

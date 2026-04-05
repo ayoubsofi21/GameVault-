@@ -6,26 +6,14 @@ export function addCartEvents() {
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const gameId = btn.dataset.id;
-
       const game = games.find((g) => g.id == gameId);
-
       addToCart(game);
-
-      // redirect to cart page
       window.location.href = "cart.html";
     });
   });
 }
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const container = document.querySelector(".cart-container");
-const totalPriceEl = document.getElementById("total-price");
-const checkoutBtn = document.querySelector(".checkout-btn");
-
-function saveCart() {
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
 function addToCart(game) {
   const existing = cart.find((item) => item.id === game.id);
 
@@ -37,12 +25,18 @@ function addToCart(game) {
 
   saveCart();
 }
-
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 function removeFromCart(index) {
   cart.splice(index, 1);
   saveCart();
   renderCart();
 }
+
+const container = document.querySelector(".cart-container");
+const totalPriceEl = document.getElementById("total-price");
+const checkoutBtn = document.querySelector(".checkout-btn");
 
 function renderCart() {
   if (!container) return;
@@ -72,7 +66,6 @@ function renderCart() {
             </h2>
 
             <p class="text-gray-400 text-sm mt-1">
-                $45 (-$4.00 Tax)
                 $${game.price}
             </p>
 
@@ -90,7 +83,7 @@ function renderCart() {
             </div>
 
             <button class="remove text-gray-400 hover:text-red-500">
-            🗑
+          <i class="fa-solid fa-xmark"></i>
             </button>
 
         </div>

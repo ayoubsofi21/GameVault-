@@ -124,4 +124,84 @@ export const games = [
     description:
       "Conduisez les voitures les plus rapides dans les paysages magnifiques du Mexique.",
   },
+  {
+    id: 13,
+    title: "Resident Evil 4 Remake",
+    price: 59.99,
+    category: "Horror",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg",
+    description:
+      "Leon Kennedy part sauver la fille du président dans un village mystérieux rempli de créatures dangereuses.",
+  },
+  {
+    id: 14,
+    title: "God of War Ragnarök",
+    price: 69.99,
+    category: "Action",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/2322010/header.jpg",
+    description:
+      "Kratos et Atreus affrontent les dieux nordiques dans une aventure épique pleine de combats et de mythologie.",
+  },
+  {
+    id: 15,
+    title: "Spider-Man Remastered",
+    price: 49.99,
+    category: "Adventure",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg",
+    description:
+      "Incarnez Spider-Man et protégez New York dans une aventure spectaculaire pleine d'action.",
+  },
+  {
+    id: 16,
+    title: "Battlefield 2042",
+    price: 39.99,
+    category: "FPS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1517290/header.jpg",
+    description:
+      "Participez à des batailles massives avec des armes futuristes et des environnements dynamiques.",
+  },
+  {
+    id: 17,
+    title: "NBA 2K24",
+    price: 69.99,
+    category: "Sport",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/2338770/header.jpg",
+    description:
+      "Vivez l'expérience ultime du basketball avec des graphismes réalistes et les plus grandes stars de la NBA.",
+  },
+  {
+    id: 18,
+    title: "Need for Speed Unbound",
+    price: 39.99,
+    category: "Racing",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1846380/header.jpg",
+    description:
+      "Courez dans les rues et échappez à la police dans ce jeu de course rapide et stylisé.",
+  },
+  {
+    id: 19,
+    title: "The Last of Us Part I",
+    price: 59.99,
+    category: "Adventure",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
+    description:
+      "Suivez Joel et Ellie dans un voyage émotionnel dans un monde détruit par une pandémie.",
+  },
+  {
+    id: 20,
+    title: "Far Cry 6",
+    price: 44.99,
+    category: "Action",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/2369390/header.jpg",
+    description:
+      "Libérez l'île de Yara d'un dictateur brutal dans ce jeu d'action en monde ouvert.",
+  },
 ];

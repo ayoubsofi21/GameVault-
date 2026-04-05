@@ -11,16 +11,9 @@ export function initSearchEvent() {
 
   input.addEventListener("input", () => {
     const value = input.value.toLowerCase();
-
-    let searchData = [];
-
-    for (let i = 0; i < games.length; i++) {
-      let val = games[i].title.toLowerCase();
-
-      if (val.includes(value)) {
-        searchData.push(games[i]);
-      }
-    }
+    const searchData = games.filter((game) =>
+      game.title.toLowerCase().includes(value),
+    );
 
     displayGames(searchData);
   });
