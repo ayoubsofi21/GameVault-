@@ -123,7 +123,7 @@ function changeQuantity(index, amount) {
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
     if (cart.length === 0) {
-      alert("Votre panier est vide !");
+      alert("Votre panier est vide ");
       return;
     }
 
@@ -131,7 +131,7 @@ if (checkoutBtn) {
     saveCart();
     renderCart();
 
-    alert("Paiement effectué !");
+    alert("Paiement effectue");
   });
 }
 renderCart();

@@ -176,7 +176,7 @@ export const games = [
   },
   {
     id: 18,
-    title: "Need for Speed Unbound",
+    title: "Need for Speed",
     price: 39.99,
     category: "Racing",
     image:

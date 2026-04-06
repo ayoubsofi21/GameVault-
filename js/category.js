@@ -7,8 +7,6 @@ export function DisplayCategory() {
   categoryBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       let category = e.target.dataset.categories;
-      //   e.className.add("bg-red-500");
-      //   console.log(category);
       if (category.toLowerCase() === "all") {
         displayGames(games);
       } else {
