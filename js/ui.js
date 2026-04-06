@@ -9,10 +9,10 @@ export function displayGames(gameList = games) {
     card.innerHTML = `
      <div class="px-4 space-y-4 my-4">
       <div class="bg-white rounded-xl shadow p-2 flex flex-col  ">
-        <a href="detail.html/${game.id}"><img
-          src="${game.image}"
+      <img
+          src="${game.image}" 
           class="rounded-lg w-full h-48 object-cover mb-2"
-        /></a>
+        />
         <div class="flex justify-between items-center">
           <div>
         <div class="flex gap-4"> 
@@ -63,6 +63,5 @@ export const createCategory = () => `
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="RPG">RPG</button>
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="FPS">FPS</button>
     <button class="category-btn bg-white px-4 py-2 rounded-full shadow md:px-10" data-categories="Adventure">Adventure</button>
-   
   </div>
 `;
