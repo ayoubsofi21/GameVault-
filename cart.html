@@ -37,7 +37,24 @@
         </button>
       </div>
     </div>
-
+    <div>
+      <input type="number" class="input-promo" />
+      <div class="containerpo"></div>
+    </div>
+    <script>
+      const input_promo = document.querySelector(".input-promo");
+      const containerpo = document.querySelector(".containerpo");
+      input_promo.addEventListener("input", () => {
+        const value = input_promo.value;
+        console.log(value);
+        if (value > 1 && value < 100) {
+          let valide = value + "%";
+          containerpo.textContent = valide;
+        } else {
+          alert("error");
+        }
+      });
+    </script>
     <script type="module" src="./js/cart.js"></script>
   </body>
 </html>
